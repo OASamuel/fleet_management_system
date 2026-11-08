@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | SamXpress</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <a class="brand brand-login" href="{{ url_for('login') }}"><span class="brand-mark">SX</span><span>SamXpress<small>LOCAL DELIVERY OPERATIONS</small></span></a>
+    <div class="login-content">
+      <aside class="login-visual">
+        <p class="eyebrow">MANCHESTER · WITHIN FIVE MILES</p>
+        <h1>Small journeys,<br>well cared for.</h1>
+        <p class="login-visual-copy">E-scooters, cargo e-bikes and compact vehicles, ready for the local run.</p>
+        <img src="{{ url_for('static', filename='fleet-scene.svg') }}" alt="SamXpress e-scooter, cargo e-bike and compact electric delivery van">
+        <div class="login-visual-foot"><span>RIGHT-SIZED FLEET</span><span>LOCAL BY DESIGN</span></div>
+      </aside>
+      <section class="login-panel">
+        <p class="eyebrow">DISPATCH ACCESS</p>
+        <h2>{{ greeting }}.<br>Ready for the run?</h2>
+        <p class="muted">Sign in to manage today's local deliveries.</p>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}<div class="notice notice-{{ category }}">{{ message }}</div>{% endfor %}
+        {% endwith %}
+        <form method="post" class="login-form">
+          <label>Username<input name="username" autocomplete="username" required placeholder="Your username"></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Your password"></label>
+          <button class="button button-primary button-wide" type="submit">Sign in <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="demo-login">Demo access: <strong>dispatch</strong> / <strong>samxpress123</strong></p>
+      </section>
+    </div>
+    <p class="login-footer">Affordable, thoughtful delivery for our student community.</p>
+  </main>
+</body>
+</html>

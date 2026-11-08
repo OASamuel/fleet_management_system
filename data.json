@@ -1,0 +1,89 @@
+{
+  "drivers": [
+    {
+      "id": "DR-01",
+      "name": "Aisha Khan",
+      "availability": "On shift"
+    },
+    {
+      "id": "DR-02",
+      "name": "Tom Wilson",
+      "availability": "On shift"
+    },
+    {
+      "id": "DR-03",
+      "name": "Maya Patel",
+      "availability": "Off shift"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "SX-01",
+      "name": "Cargo bike 01",
+      "type": "Cargo bike",
+      "availability": "Available"
+    },
+    {
+      "id": "SX-02",
+      "name": "Cargo bike 02",
+      "type": "Cargo bike",
+      "availability": "Available"
+    },
+    {
+      "id": "SX-03",
+      "name": "Van 01",
+      "type": "Electric van",
+      "availability": "Available"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "SX-2048",
+      "customer": "Leah Thompson",
+      "item": "Weekly groceries",
+      "pickup": "Oxford Road Market",
+      "dropoff": "Fallowfield student halls",
+      "due_date": "2026-11-08",
+      "distance_miles": "2.4",
+      "status": "In transit",
+      "driver_id": "DR-01",
+      "vehicle_id": "SX-01"
+    },
+    {
+      "id": "SX-2049",
+      "customer": "Daniel Reed",
+      "item": "Study supplies",
+      "pickup": "Manchester Arndale",
+      "dropoff": "Victoria Park, Manchester",
+      "due_date": "2026-11-08",
+      "distance_miles": "3.1",
+      "status": "Requested",
+      "driver_id": "",
+      "vehicle_id": ""
+    },
+    {
+      "id": "SX-2050",
+      "customer": "Priya Shah",
+      "item": "Small parcel",
+      "pickup": "Rusholme post office",
+      "dropoff": "University of Manchester",
+      "due_date": "2026-11-09",
+      "distance_miles": "1.8",
+      "status": "Allocated",
+      "driver_id": "DR-02",
+      "vehicle_id": "SX-02"
+    },
+    {
+      "id": "SX-2051",
+      "customer": "Oliver Green",
+      "item": "Kitchen essentials",
+      "pickup": "Local household shop",
+      "dropoff": "Hulme student accommodation",
+      "due_date": "2026-11-07",
+      "distance_miles": "2.7",
+      "status": "Delivered",
+      "driver_id": "DR-02",
+      "vehicle_id": "SX-03"
+    }
+  ]
+}
